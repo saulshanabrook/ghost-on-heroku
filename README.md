@@ -50,6 +50,20 @@ Once your app is up and running with these variables in place, you should be abl
 
 This repository is essentially a minimal web application that specifies [Ghost as a dependency](https://github.com/TryGhost/Ghost/wiki/Using-Ghost-as-an-NPM-module), and makes a deploy button available.
 
+
+## Updating
+
+After deploying your own Ghost blog, you can update it by running the following commands:
+```
+heroku git:clone --app YOURAPPNAME && cd YOURAPPNAME
+git remote add origin https://github.com/cobyism/ghost-on-heroku
+git pull origin master # may trigger a few merge conflicts, depending on how long since last update
+git push heroku master
+```
+
+This will pull down the code that was deployed to Heroku so you have it locally, attach this repository as a new remote, attempt to pull down the latest version and merge it in, and then push that change back to your Heroku app instance.  
+
+
 ## Problems?
 
 If you have problems using your instance of Ghost, you should check the [official documentation](http://support.ghost.org/) or open an issue on [the official issue tracker](https://github.com/TryGhost/Ghost/issues). If you discover an issue with the deployment process provided by *this repository*, then [open an issue here](https://github.com/cobyism/ghost-on-heroku).
