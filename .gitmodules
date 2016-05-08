@@ -1,0 +1,3 @@
+[submodule "content/themes/Upholsterygeist"]
+	path = content/themes/Upholsterygeist
+	url = https://github.com/petewailes/Upholsterygeist.git
